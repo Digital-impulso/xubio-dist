@@ -25,6 +25,16 @@ android {
     }
 }
 
+// Alguna dependencia transitiva de AndroidX todavía pide los artifacts viejos
+// kotlin-stdlib-jdk7/jdk8 (separados). Desde Kotlin 1.8, kotlin-stdlib ya los
+// trae fusionados adentro — tenerlos los dos a la vez duplica las mismas
+// clases y Gradle lo rechaza (checkDebugDuplicateClasses). No se declaró
+// Kotlin a mano en este proyecto; esto solo excluye los módulos redundantes.
+configurations.all {
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk7'
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+}
+
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.webkit:webkit:1.11.0'
