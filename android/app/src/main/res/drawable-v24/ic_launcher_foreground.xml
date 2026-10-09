@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mismo isotipo "X" que /icon.svg del PWA, reescalado al safe-zone (~66dp
+     centrado) del canvas adaptativo de 108dp. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <group android:translateX="26" android:translateY="27.6" android:scaleX="0.644" android:scaleY="0.644">
+        <group android:translateX="-3379" android:translateY="-3575.51">
+            <path android:fillColor="#FFFFFF" android:pathData="M3402 3575.51C3402.76 3575.51 3403.45 3575.94 3403.77 3576.61L3422.47 3614.77L3441.16 3576.61C3441.49 3575.94 3442.18 3575.51 3442.93 3575.51H3463.96C3465.42 3575.51 3466.37 3577.02 3465.74 3578.32L3457.91 3594.3C3452.09 3606.17 3440.91 3614.57 3427.82 3616.91L3426.18 3617.2L3447.73 3620.98C3448.34 3621.09 3448.87 3621.48 3449.15 3622.03L3465.73 3654.76C3466.38 3656.05 3465.42 3657.55 3463.96 3657.55H3442.93C3442.18 3657.55 3441.49 3657.14 3441.16 3656.48L3422.47 3619.55L3403.78 3656.49V3656.48C3403.45 3657.14 3402.76 3657.55 3402.01 3657.55H3380.98C3379.51 3657.55 3378.56 3656.05 3379.21 3654.76L3384.39 3644.54C3391.32 3630.85 3404.04 3620.9 3419.08 3617.26L3397.27 3613.37C3396.65 3613.26 3396.12 3612.86 3395.84 3612.3L3379.2 3578.32C3378.56 3577.02 3379.52 3575.51 3380.97 3575.51H3402Z"/>
+        </group>
+    </group>
+</vector>

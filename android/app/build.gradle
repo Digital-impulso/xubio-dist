@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "com.digitalimpulso.xubio.totem"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.digitalimpulso.xubio.totem"
+        // minSdk 26: así el ícono adaptativo (mipmap-anydpi-v26) no necesita
+        // un fallback PNG para versiones viejas, que acá no hay forma de generar.
+        minSdk 26
+        targetSdk 34
+        versionCode project.hasProperty('appVersionCode') ? (project.property('appVersionCode') as Integer) : 1
+        versionName project.hasProperty('appVersionName') ? project.property('appVersionName') : "0.1.0"
+    }
+
+    buildTypes {
+        debug {
+            // Firma de debug (fija, la misma en cualquier instalación del SDK de
+            // Android) — alcanza para sideload/kiosco. Las actualizaciones
+            // instalan limpio porque esa clave es siempre la misma. Pasar a una
+            // keystore de release propia queda documentado en el README del repo
+            // para cuando haga falta.
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.webkit:webkit:1.11.0'
+}
